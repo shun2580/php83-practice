@@ -1,0 +1,13 @@
+name: php-practice
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./public:/var/www/html/public
+      - ./problems:/var/www/html/problems
+      - ./tests:/var/www/html/tests
+      - ./src:/var/www/html/src
